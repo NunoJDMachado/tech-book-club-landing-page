@@ -1,0 +1,287 @@
+@layer reset, global, components, utils;
+
+@layer reset {
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    * {
+        margin: 0;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    img,
+    picture,
+    svg {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    input,
+    button,
+    textarea,
+    select {
+        background: none;
+        font: inherit;
+        border: none;
+        padding: 0;
+    }
+
+    button {
+        all: unset;
+        cursor: pointer;
+    }
+}
+
+@layer global {
+    @font-face {
+        font-display: swap;
+        font-family: "Martian Mono";
+        font-style: normal;
+        font-weight: 400;
+        src: url("assets/fonts/martian-mono/static/MartianMono-Regular.ttf") format("truetype");
+    }
+
+    @font-face {
+        font-display: swap;
+        font-family: "Martian Mono";
+        font-style: normal;
+        font-weight: 600;
+        src: url("assets/fonts/martian-mono/static/MartianMono-SemiBold.ttf") format("truetype");
+    }
+
+    @font-face {
+        font-display: swap;
+        font-family: "Martian Mono";
+        font-style: normal;
+        font-weight: 700;
+        src: url("assets/fonts/martian-mono/static/MartianMono-Bold.ttf") format("truetype");
+    }
+
+    @font-face {
+        font-display: swap;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        src: url("assets/fonts/inter/static/Inter_18pt-Regular.ttf") format("truetype");
+    }
+
+    @font-face {
+        font-display: swap;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 600;
+        src: url("assets/fonts/inter/static/Inter_18pt-SemiBold.ttf") format("truetype");
+    }
+
+    /* base colors */
+    :root {
+        --c-neutral-900: hsl(194, 78%, 11%);
+        --c-neutral-700: hsl(195, 23%, 28%);
+        --c-neutral-200: hsl(17, 12%, 89%);
+        --c-neutral-100: hsl(17, 41%, 97%);
+        --c-white: hsl(0, 0%, 100%);
+
+        --c-light-salmon-500: hsl(22, 99%, 72%);
+        --c-light-salmon-100: hsl(22, 100%, 91%);
+        --c-light-salmon-50: hsl(23, 100%, 97%);
+
+        --c-text-gradient-1: hsl(22, 100%, 69%);
+        --c-text-gradient-2: hsl(194, 78%, 11%);
+
+        --c-gradient-1: hsl(22, 100%, 91%);
+        --c-gradient-2: hsl(23, 100%, 97%);
+    }
+
+    /* colors */
+    :root {
+    }
+
+    /* fonts */
+    :root {
+        --fs-62: calc(62 / 16 * 1rem);
+        --fs-50: calc(50 / 16 * 1rem);
+        --fs-38: calc(38 / 16 * 1rem);
+        --fs-34: calc(34 / 16 * 1rem);
+        --fs-24: calc(24 / 16 * 1rem);
+        --fs-20: calc(20 / 16 * 1rem);
+        --fs-18: calc(18 / 16 * 1rem);
+        --fs-16: calc(16 / 16 * 1rem);
+        --fs-14: calc(14 / 16 * 1rem);
+
+        --lh-110: 1.1;
+        --lh-120: 1.2;
+        --lh-130: 1.3;
+        --lh-140: 1.4;
+
+        --ls-negative-2: -2px;
+        --ls-negative-1: -1px;
+        --ls-negative-05: -0.5px;
+    }
+
+    body {
+        font-family: "Martian Mono", Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        color: var(--c-neutral-700);
+    }
+
+    h2 {
+        color: var(--c-neutral-900);
+    }
+}
+
+@layer components {
+    .header {
+        padding-block-start: 24px;
+        margin-block-end: 48px;
+
+        .header__logo {
+        }
+    }
+
+    .hero {
+        display: grid;
+
+        @media (width >= calc(1024 / 16 * 1rem)) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .hero__content {
+        }
+
+        .hero__title {
+            margin-block-end: 24px;
+        }
+
+        .hero__text {
+            margin-block-end: 32px;
+        }
+
+        .hero__button {
+            margin-block-end: 20px;
+        }
+
+        .hero__testimonial {
+        }
+
+        .hero__avatars {
+        }
+
+        .hero__stars {
+        }
+
+        .hero__testimonial-text {
+        }
+
+        .hero__image {
+        }
+    }
+}
+
+@layer utils {
+    .wrapper {
+        --padding-inline: 32px;
+
+        width: calc(100% - var(--padding-inline));
+        margin-inline: auto;
+
+        @media (width >= calc(640 / 16 * 1rem)) {
+            --padding-inline: 64px;
+        }
+
+        @media (width >= calc(1024 / 16 * 1rem)) {
+            max-width: calc(1174 / 16 * 1rem);
+        }
+    }
+
+    .text-preset-1 {
+        --font-size: var(--fs-38);
+
+        font-size: var(--font-size);
+        line-height: var(--lh-120);
+        letter-spacing: calc(var(--ls-negative-2) / var(--font-size) * 1em);
+        font-weight: 700;
+
+        @media (width >= calc(640 / 16 * 1rem)) {
+            --font-size: var(--fs-62);
+        }
+    }
+
+    .text-preset-2 {
+        --font-size: var(--fs-34);
+
+        font-size: var(--font-size);
+        line-height: var(--lh-130);
+        letter-spacing: calc(var(--ls-negative-2) / var(--font-size) * 1em);
+        font-weight: 600;
+
+        @media (width >= calc(640 / 16 * 1rem)) {
+            --font-size: var(--fs-50);
+        }
+    }
+
+    .text-preset-3 {
+        --font-size: var(--fs-24);
+
+        font-size: var(--font-size);
+        line-height: var(--lh-110);
+        letter-spacing: calc(var(--ls-negative-1) / var(--font-size) * 1em);
+        font-weight: 600;
+
+        @media (width >= calc(640 / 16 * 1rem)) {
+            --font-size: var(--fs-34);
+        }
+    }
+
+    .text-preset-4 {
+        --font-size: var(--fs-24);
+
+        font-size: var(--font-size);
+        line-height: var(--lh-110);
+        letter-spacing: calc(var(--ls-negative-1) / var(--font-size) * 1em);
+
+        &.semibold {
+            font-weight: 600;
+        }
+    }
+
+    .text-preset-5 {
+        --font-size: var(--fs-20);
+
+        font-size: var(--font-size);
+        line-height: var(--lh-140);
+        letter-spacing: calc(var(--ls-negative-05) / var(--font-size) * 1em);
+        font-family: "Inter", Arial, Helvetica, sans-serif;
+
+        &.semibold {
+            font-weight: 600;
+        }
+    }
+
+    .text-preset-6 {
+        --font-size: var(--fs-16);
+
+        font-size: var(--font-size);
+        line-height: var(--lh-130);
+        letter-spacing: calc(var(--ls-negative-1) / var(--font-size) * 1em);
+        font-weight: 600;
+
+        @media (width >= calc(640 / 16 * 1rem)) {
+            --font-size: var(--fs-18);
+        }
+    }
+
+    .text-preset-7 {
+        --font-size: var(--fs-14);
+
+        font-size: var(--font-size);
+        line-height: var(--lh-120);
+        letter-spacing: calc(var(--ls-negative-1) / var(--font-size) * 1em);
+    }
+}
