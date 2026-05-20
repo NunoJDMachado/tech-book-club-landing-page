@@ -143,20 +143,33 @@
 
 @layer components {
     .hero {
+        overflow: hidden;
+        position: relative;
         background-color: var(--c-neutral-100);
         background-image: url(assets/images/pattern-light-bg.svg);
         background-repeat: no-repeat;
         padding-block-end: 80px;
 
+        @media (width >= calc(640 / 16 * 1rem)) {
+            background-repeat: repeat;
+        }
+
         .hero__header {
+            opacity: 0;
             padding-block-start: 24px;
             margin-block-end: 48px;
+
+            @media (width >= calc(640 / 16 * 1rem)) {
+                padding-block-start: 32px;
+                margin-block-end: 64px;
+            }
         }
 
         .hero__logo {
         }
 
         .hero__body {
+            opacity: 0;
             display: grid;
             gap: 64px;
 
@@ -187,6 +200,9 @@
             margin-block-end: 20px;
         }
 
+        .hero__button-icon {
+        }
+
         .hero__testimonial {
             display: grid;
             grid-template-columns: repeat(2, auto);
@@ -211,13 +227,21 @@
         .hero__image {
             border-radius: 5px;
         }
+
+        .hero__glow {
+            width: 684px;
+            height: 684px;
+            position: absolute;
+            inset: 0 0 0 0;
+            translate: 50% 150%;
+        }
     }
 }
 
 /* reusable components */
 @layer components {
     .button {
-        display: flex;
+        display: inline-flex;
         justify-content: center;
         align-items: center;
         gap: 16px;
@@ -227,6 +251,7 @@
         border: 2px solid var(--color-button-border);
         border-radius: 8px;
         padding-block: 17.5px;
+        padding-inline: 22px;
     }
 }
 

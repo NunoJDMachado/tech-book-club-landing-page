@@ -27,7 +27,9 @@
                     <div class="hero__body">
                         <div class="hero__content">
                             <h1 class="hero__title text-preset-1">
-                                Join the ultimate tech book club
+                                Join the<br />
+                                ultimate tech<br />
+                                book club
                             </h1>
 
                             <p class="hero__text text-preset-5">
@@ -38,7 +40,13 @@
 
                             <a href="#" class="hero__button button text-preset-6">
                                 Review Membership Options
-                                <img src="assets/images/icon-arrow-down.svg" alt="" />
+                                <img
+                                    src="assets/images/icon-arrow-down.svg"
+                                    alt=""
+                                    width="24"
+                                    height="25"
+                                    class="hero__button-icon"
+                                />
                             </a>
 
                             <div class="hero__testimonial">
@@ -89,13 +97,31 @@
                             </div>
                         </div>
 
-                        <img
-                            src="assets/images/image-hero-mobile.webp"
-                            alt=""
-                            class="hero__image"
-                        />
+                        <picture>
+                            <source
+                                media="(max-width: 640px)"
+                                srcset="assets/images/image-hero-mobile.webp"
+                            />
+                            <source
+                                media="(max-width: 1024px)"
+                                srcset="assets/images/image-hero-tablet.webp"
+                            />
+                            <img
+                                src="assets/images/image-hero-desktop.webp"
+                                alt=""
+                                class="hero__image"
+                            />
+                        </picture>
                     </div>
                 </div>
+
+                <img
+                    src="assets/images/pattern-glow.svg"
+                    alt=""
+                    width="1084"
+                    height="1084"
+                    class="hero__glow"
+                />
             </section>
         </main>
     </body>
