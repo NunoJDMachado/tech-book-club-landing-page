@@ -91,16 +91,17 @@
         --c-light-salmon-500: hsl(22, 99%, 72%);
         --c-light-salmon-100: hsl(22, 100%, 91%);
         --c-light-salmon-50: hsl(23, 100%, 97%);
-
-        --c-text-gradient-1: hsl(22, 100%, 69%);
-        --c-text-gradient-2: hsl(194, 78%, 11%);
-
-        --c-gradient-1: hsl(22, 100%, 91%);
-        --c-gradient-2: hsl(23, 100%, 97%);
     }
 
     /* colors */
     :root {
+        --color-h1-gradient-1: var(--c-light-salmon-500);
+        --color-h1-gradient-2: var(--c-neutral-900);
+        --color-h2-text: var(--c-neutral-900);
+        --color-p-text: var(--c-neutral-700);
+        --color-button-bg: var(--c-light-salmon-50);
+        --color-button-text: var(--c-neutral-900);
+        --color-button-border: var(--c-neutral-900);
     }
 
     /* fonts */
@@ -132,30 +133,49 @@
     }
 
     h2 {
-        color: var(--c-neutral-900);
+        color: var(--color-h2-text);
+    }
+
+    p {
+        color: var(--color-p-text);
     }
 }
 
 @layer components {
-    .header {
-        padding-block-start: 24px;
-        margin-block-end: 48px;
-
-        .header__logo {
-        }
-    }
-
     .hero {
-        display: grid;
+        background-color: var(--c-neutral-100);
+        background-image: url(assets/images/pattern-light-bg.svg);
+        background-repeat: no-repeat;
+        padding-block-end: 80px;
 
-        @media (width >= calc(1024 / 16 * 1rem)) {
-            grid-template-columns: repeat(2, 1fr);
+        .hero__header {
+            padding-block-start: 24px;
+            margin-block-end: 48px;
+        }
+
+        .hero__logo {
+        }
+
+        .hero__body {
+            display: grid;
+            gap: 64px;
+
+            @media (width >= calc(1024 / 16 * 1rem)) {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
         .hero__content {
         }
 
         .hero__title {
+            background: linear-gradient(
+                135deg,
+                var(--color-h1-gradient-1) -30%,
+                var(--color-h1-gradient-2) 95%
+            );
+            background-clip: text;
+            color: transparent;
             margin-block-end: 24px;
         }
 
@@ -168,19 +188,45 @@
         }
 
         .hero__testimonial {
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            justify-content: start;
+            align-items: center;
+            column-gap: 12px;
+            row-gap: 4px;
         }
 
         .hero__avatars {
+            width: calc(110 / 16 * 1rem);
+            grid-row: span 2;
         }
 
         .hero__stars {
+            display: flex;
         }
 
         .hero__testimonial-text {
         }
 
         .hero__image {
+            border-radius: 5px;
         }
+    }
+}
+
+/* reusable components */
+@layer components {
+    .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        background-color: var(--color-button-bg);
+        color: var(--color-button-text);
+        text-transform: uppercase;
+        border: 2px solid var(--color-button-border);
+        border-radius: 8px;
+        padding-block: 17.5px;
     }
 }
 
