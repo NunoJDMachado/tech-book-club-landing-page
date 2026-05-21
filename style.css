@@ -167,6 +167,10 @@
                 padding-block-start: 32px;
                 margin-block-end: 64px;
             }
+
+            @media (width >= calc(1024 / 16 * 1rem)) {
+                margin-block-end: 80px;
+            }
         }
 
         .hero__logo {
@@ -232,6 +236,10 @@
 
             @media (width >= calc(600 / 16 * 1rem)) {
                 border-radius: 10.43px;
+            }
+
+            @media (width >= calc(1024 / 16 * 1rem)) {
+                border-radius: 8px;
             }
         }
 
