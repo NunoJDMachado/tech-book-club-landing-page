@@ -282,12 +282,20 @@
 
         .perks__title {
             margin-block-end: 24px;
+
+            @media (width >= calc(640 / 16 * 1rem)) {
+                margin-block-end: 34px;
+            }
         }
 
         .perks__list {
             padding: 0;
             display: grid;
             gap: 16px;
+
+            @media (width >= calc(640 / 16 * 1rem)) {
+                gap: 24px;
+            }
         }
 
         .perks__item {
@@ -311,6 +319,10 @@
 
         .perks__image {
             border-radius: 12.25px;
+
+            @media (width >= calc(640 / 16 * 1rem)) {
+                border-radius: 25.14px;
+            }
         }
     }
 }
