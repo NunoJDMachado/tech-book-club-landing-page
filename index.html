@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <main>
+        <main class="main">
             <section class="hero">
                 <div class="hero__wrapper wrapper">
                     <header class="hero__header">
@@ -101,15 +101,21 @@
                             <source
                                 media="(max-width: 640px)"
                                 srcset="assets/images/image-hero-mobile.webp"
+                                width="686"
+                                height="744"
                             />
                             <source
                                 media="(max-width: 1024px)"
                                 srcset="assets/images/image-hero-tablet.webp"
+                                width="1408"
+                                height="1596"
                             />
                             <img
                                 src="assets/images/image-hero-desktop.webp"
                                 alt=""
                                 class="hero__image"
+                                width="1072"
+                                height="1212"
                             />
                         </picture>
                     </div>
@@ -122,6 +128,45 @@
                     height="1084"
                     class="hero__glow"
                 />
+            </section>
+
+            <section class="perks wrapper">
+                <div class="perks__content">
+                    <h2 class="perks__title text-preset-2">Read together, grow together</h2>
+
+                    <ul class="perks__list text-preset-5">
+                        <li class="perks__item">
+                            Monthly curated tech reads selected by industry experts
+                        </li>
+                        <li class="perks__item">
+                            Virtual and in-person meetups for deep-dive discussions
+                        </li>
+                        <li class="perks__item">Early access to new tech book releases</li>
+                        <li class="perks__item">Author Q&A sessions with tech thought leaders</li>
+                    </ul>
+                </div>
+
+                <picture>
+                    <source
+                        media="(max-width: 640px)"
+                        srcset="assets/images/image-read-together-mobile.webp"
+                        width="686"
+                        height="638"
+                    />
+                    <source
+                        media="(max-width: 1024px)"
+                        srcset="assets/images/image-read-together-tablet.webp"
+                        width="1408"
+                        height="1308"
+                    />
+                    <img
+                        src="assets/images/image-read-together-desktop.webp"
+                        alt=""
+                        class="perks__image"
+                        width="1120"
+                        height="1040"
+                    />
+                </picture>
             </section>
         </main>
     </body>
