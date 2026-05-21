@@ -143,8 +143,8 @@
 
 @layer components {
     .hero {
-        overflow: hidden;
         position: relative;
+        overflow: hidden;
         background-color: var(--c-neutral-100);
         background-image: url(assets/images/pattern-light-bg.svg);
         background-repeat: no-repeat;
@@ -154,8 +154,12 @@
             background-repeat: repeat;
         }
 
+        .hero__wrapper {
+            position: relative;
+            z-index: 1;
+        }
+
         .hero__header {
-            opacity: 0;
             padding-block-start: 24px;
             margin-block-end: 48px;
 
@@ -169,7 +173,6 @@
         }
 
         .hero__body {
-            opacity: 0;
             display: grid;
             gap: 64px;
 
@@ -225,15 +228,20 @@
         }
 
         .hero__image {
-            border-radius: 5px;
+            border-radius: 5.08px;
+
+            @media (width >= calc(600 / 16 * 1rem)) {
+                border-radius: 10.43px;
+            }
         }
 
         .hero__glow {
             width: 684px;
             height: 684px;
             position: absolute;
-            inset: 0 0 0 0;
-            translate: 50% 150%;
+            right: 0;
+            bottom: 0;
+            translate: 50% 50%;
         }
     }
 }
