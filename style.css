@@ -277,7 +277,16 @@
         display: grid;
         gap: 40px;
 
+        @media (width >= calc(1024 / 16 * 1rem)) {
+            grid-template-columns: minmax(auto, 560px) auto;
+            align-items: center;
+            gap: 80px;
+        }
+
         .perks__content {
+            @media (width >= calc(1024 / 16 * 1rem)) {
+                order: 1;
+            }
         }
 
         .perks__title {
@@ -295,6 +304,10 @@
 
             @media (width >= calc(640 / 16 * 1rem)) {
                 gap: 24px;
+            }
+
+            @media (width >= calc(1024 / 16 * 1rem)) {
+                max-width: 34ch;
             }
         }
 
@@ -315,6 +328,9 @@
                 /* background-size: contain; */
                 /* background-position: center; */
             }
+        }
+
+        .perks__picture {
         }
 
         .perks__image {
