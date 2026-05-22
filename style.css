@@ -319,14 +319,10 @@
 
             &::before {
                 content: "";
-                /* display: inline-block; */
                 width: calc(28 / 16 * 1rem);
                 height: calc(28 / 16 * 1rem);
                 flex-shrink: 0;
                 background-image: url(assets/images/icon-check.svg);
-                /* background-repeat: no-repeat; */
-                /* background-size: contain; */
-                /* background-position: center; */
             }
         }
 
@@ -358,6 +354,7 @@
         }
 
         .languages__title {
+            max-width: 19ch;
             margin-block-end: 24px;
 
             @media (width >= calc(640 / 16 * 1rem)) {
@@ -368,22 +365,6 @@
         .languages__circled-word {
             position: relative;
             display: inline-block;
-
-            /* Previous approach with nested img kept for comparison.
-            img {
-                position: absolute;
-                max-width: unset;
-                height: calc(46.53 / 16 * 1rem);
-                width: calc(108.62 / 16 * 1rem);
-                bottom: -2px;
-                right: -15px;
-
-                @media (width >= calc(640 / 16 * 1rem)) {
-                    height: calc(68.06 / 16 * 1rem);
-                    width: calc(158.9 / 16 * 1rem);
-                }
-            }
-            */
 
             &::after {
                 content: "";
