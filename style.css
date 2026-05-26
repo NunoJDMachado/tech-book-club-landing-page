@@ -517,6 +517,11 @@
             @media (width >= calc(640 / 16 * 1rem)) {
                 margin-block-end: 40px;
             }
+
+            @media (width >= calc(1024 / 16 * 1rem)) {
+                text-align: center;
+                margin-block-end: 64px;
+            }
         }
 
         .membership__options {
@@ -525,6 +530,11 @@
 
             @media (width >= calc(640 / 16 * 1rem)) {
                 grid-template-columns: repeat(2, 1fr);
+            }
+
+            @media (width >= calc(1024 / 16 * 1rem)) {
+                grid-template-columns: auto minmax(auto, calc(350 / 16 * 1rem)) auto;
+                align-items: center;
             }
         }
 
@@ -538,6 +548,10 @@
                 background-color: var(--color-membership-glow-bg);
                 z-index: 0;
                 overflow: hidden;
+
+                @media (width >= calc(1024 / 16 * 1rem)) {
+                    padding-block: 40px;
+                }
 
                 .membership__glow {
                     position: absolute;
