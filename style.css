@@ -106,12 +106,15 @@
         --color-reading-journey-bg: var(--c-neutral-100);
         --color-membership-border: var(--c-neutral-200);
         --color-membership-price-text: var(--c-neutral-900);
+        --color-membership-price-span-text: var(--c-neutral-700);
+        --color-membership-divider: var(--c-neutral-200);
         --color-membership-button-border: var(--c-neutral-900);
         --color-membership-button-bg: var(--c-light-salmon-50);
         --color-membership-button-text: var(--c-neutral-900);
+        --color-membership-glow-bg: var(--c-neutral-100);
     }
 
-    /* fonts */
+    /* base fonts */
     :root {
         --fs-62: calc(62 / 16 * 1rem);
         --fs-50: calc(50 / 16 * 1rem);
@@ -131,6 +134,11 @@
         --ls-negative-2: -2px;
         --ls-negative-1: -1px;
         --ls-negative-05: -0.5px;
+    }
+
+    /* fonts */
+    :root {
+        --font-size-membership-price: var(--fs-34);
     }
 
     body {
@@ -519,7 +527,7 @@
 
             &.glow {
                 position: relative;
-                background-color: var(--c-neutral-100);
+                background-color: var(--color-membership-glow-bg);
                 z-index: 0;
                 overflow: hidden;
 
@@ -542,18 +550,16 @@
         }
 
         .membership__price {
-            --font-size: var(--fs-34);
-
             display: flex;
             gap: 8px;
-            color: var(--c-neutral-900);
-            font-size: var(--font-size);
+            color: var(--color-membership-price-text);
+            font-size: var(--font-size-membership-price);
             line-height: var(--lh-130);
-            letter-spacing: calc(var(--ls-negative-1) / var(--font-size) * 1em);
+            letter-spacing: calc(var(--ls-negative-1) / var(--color-membership-price-text) * 1em);
             font-weight: 600;
 
             span {
-                color: var(--c-neutral-700);
+                color: var(--color-membership-price-span-text);
                 font-weight: 400;
                 margin-block: auto;
             }
@@ -562,7 +568,7 @@
         .membership__divider {
             border: none;
             height: 1px;
-            background-color: var(--c-neutral-200);
+            background-color: var(--color-membership-divider);
         }
 
         .membership__features {
