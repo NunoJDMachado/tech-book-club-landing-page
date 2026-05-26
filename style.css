@@ -513,11 +513,19 @@
     .membership {
         .membership__title {
             margin-block-end: 24px;
+
+            @media (width >= calc(640 / 16 * 1rem)) {
+                margin-block-end: 40px;
+            }
         }
 
         .membership__options {
             display: grid;
             gap: 24px;
+
+            @media (width >= calc(640 / 16 * 1rem)) {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
         .membership__option {
