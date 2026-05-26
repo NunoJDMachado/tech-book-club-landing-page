@@ -104,6 +104,11 @@
         --color-button-border: var(--c-neutral-900);
         --color-reading-journey-text: var(--c-neutral-900);
         --color-reading-journey-bg: var(--c-neutral-100);
+        --color-membership-border: var(--c-neutral-200);
+        --color-membership-price-text: var(--c-neutral-900);
+        --color-membership-button-border: var(--c-neutral-900);
+        --color-membership-button-bg: var(--c-light-salmon-50);
+        --color-membership-button-text: var(--c-neutral-900);
     }
 
     /* fonts */
@@ -136,6 +141,10 @@
 
     h2 {
         color: var(--color-h2-text);
+    }
+
+    h3 {
+        color: var(--c-neutral-900);
     }
 
     p {
@@ -492,6 +501,78 @@
             bottom: 0;
         }
     }
+
+    .membership {
+        .membership__title {
+            margin-block-end: 24px;
+        }
+
+        .membership__options {
+            display: grid;
+            gap: 24px;
+        }
+
+        .membership__option {
+            border: 1px solid var(--color-membership-border);
+            border-radius: 8px;
+            padding: 24px;
+        }
+
+        .membership__option-body {
+            display: grid;
+            gap: 24px;
+            margin-block-end: 32px;
+        }
+
+        .membership__option-title {
+        }
+
+        .membership__price {
+            --font-size: var(--fs-34);
+
+            display: flex;
+            gap: 8px;
+            color: var(--c-neutral-900);
+            font-size: var(--font-size);
+            line-height: var(--lh-130);
+            letter-spacing: calc(var(--ls-negative-1) / var(--font-size) * 1em);
+            font-weight: 600;
+
+            span {
+                color: var(--c-neutral-700);
+                font-weight: 400;
+                margin-block: auto;
+            }
+        }
+
+        .membership__divider {
+            border: none;
+            height: 1px;
+            background-color: var(--c-neutral-200);
+        }
+
+        .membership__features {
+            display: grid;
+            gap: 16px;
+        }
+
+        .membership__feature {
+            display: flex;
+            gap: 12px;
+        }
+
+        .membership__feature-icon {
+            width: 24px;
+            height: 24px;
+        }
+
+        .membership__feature-text {
+        }
+
+        .membership__button {
+            width: 100%;
+        }
+    }
 }
 
 /* reusable components */
@@ -524,6 +605,12 @@
 
         @media (width >= calc(1024 / 16 * 1rem)) {
             max-width: calc(1174 / 16 * 1rem);
+        }
+
+        &.wrapper-sm {
+            @media (width >= calc(1024 / 16 * 1rem)) {
+                max-width: calc(970 / 16 * 1rem);
+            }
         }
     }
 
@@ -563,6 +650,7 @@
 
         @media (width >= calc(640 / 16 * 1rem)) {
             --font-size: var(--fs-34);
+            line-height: var(--lh-130);
         }
     }
 

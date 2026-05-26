@@ -1,0 +1,1 @@
+- make the glow effect be a pseudo element instead of cluttering the html?
