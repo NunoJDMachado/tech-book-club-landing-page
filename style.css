@@ -112,6 +112,7 @@
         --color-membership-button-bg: var(--c-light-salmon-50);
         --color-membership-button-text: var(--c-neutral-900);
         --color-membership-glow-bg: var(--c-neutral-100);
+        --color-testimonial-quote-text: var(--c-neutral-900);
     }
 
     /* base fonts */
@@ -613,6 +614,28 @@
 
         .membership__button {
             width: 100%;
+        }
+    }
+
+    .testimonial {
+        display: grid;
+        gap: 32px;
+
+        .testimonal__stars {
+            display: flex;
+            gap: 6px;
+
+            img {
+                width: calc(28 / 16 * 1rem);
+                height: calc(28 / 16 * 1rem);
+            }
+        }
+
+        .testimonal__quote p {
+            color: var(--color-testimonial-quote-text);
+        }
+
+        .testimonal__quote-attribution {
         }
     }
 }
