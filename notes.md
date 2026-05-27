@@ -1,3 +1,6 @@
 - make the glow effect be a pseudo element instead of cluttering the html?
 - fix reading journey desktop glow being on top of the text
 - reusable class for the stars + review membership options component?
+- minimum accessibility
+- hero stars gap
+- fix footer divider on tablet
