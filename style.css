@@ -621,6 +621,11 @@
         display: grid;
         gap: 32px;
 
+        @media (width >= calc(1024 / 16 * 1rem)) {
+            justify-items: center;
+            text-align: center;
+        }
+
         .testimonal__stars {
             display: flex;
             gap: 6px;
