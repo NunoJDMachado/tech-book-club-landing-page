@@ -573,18 +573,10 @@
                 position: relative;
                 background-color: var(--color-membership-glow-bg);
                 z-index: 0;
-                overflow: hidden;
 
                 @media (width >= calc(1024 / 16 * 1rem)) {
                     padding-block: 40px;
                 }
-
-                /* .membership__glow {
-                    position: absolute;
-                    right: 0;
-                    bottom: 0;
-                    z-index: -1;
-                } */
 
                 &::after {
                     content: "";
@@ -595,6 +587,17 @@
                     right: 0;
                     bottom: 0;
                     background-image: url(assets/images/glow/membership/mobile.png);
+
+                    @media (width >= calc(640 / 16 * 1rem)) {
+                        height: 356px;
+                        background-image: url(assets/images/glow/membership/tablet.png);
+                    }
+
+                    @media (width >= calc(1024 / 16 * 1rem)) {
+                        width: 350px;
+                        height: 388px;
+                        background-image: url(assets/images/glow/membership/desktop.png);
+                    }
                 }
             }
         }

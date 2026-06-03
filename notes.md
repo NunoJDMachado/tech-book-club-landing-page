@@ -1,5 +1,5 @@
-- make the glow effect be a pseudo element instead of cluttering the html?
 - reusable class for the stars + review membership options component?
 - minimum accessibility
 - hero stars gap
 - fix footer divider on tablet
+- add languages icons
