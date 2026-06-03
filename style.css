@@ -512,11 +512,21 @@
             }
         }
 
-        .reading-journey__glow {
+        /* .reading-journey__glow {
             position: absolute;
             right: 0;
             bottom: 0;
             z-index: -1;
+        } */
+
+        &::after {
+            content: "";
+            width: 340px;
+            height: 502px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            background-image: url(assets/images/glow/reading-journey/mobile.png);
         }
     }
 
