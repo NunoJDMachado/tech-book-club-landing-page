@@ -1,4 +1,3 @@
 - minimum accessibility
-- fix footer divider on tablet
 - add languages icons
 - hover states
