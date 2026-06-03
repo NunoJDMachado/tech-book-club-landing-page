@@ -512,21 +512,27 @@
             }
         }
 
-        /* .reading-journey__glow {
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            z-index: -1;
-        } */
-
         &::after {
             content: "";
+            z-index: -1;
             width: 340px;
             height: 502px;
             position: absolute;
             right: 0;
             bottom: 0;
             background-image: url(assets/images/glow/reading-journey/mobile.png);
+
+            @media (width >= calc(640 / 16 * 1rem)) {
+                width: 605px;
+                height: 602px;
+                background-image: url(assets/images/glow/reading-journey/tablet.png);
+            }
+
+            @media (width >= calc(1024 / 16 * 1rem)) {
+                width: 572px;
+                height: 455px;
+                background-image: url(assets/images/glow/reading-journey/desktop.png);
+            }
         }
     }
 
