@@ -102,6 +102,9 @@
         --color-button-bg: var(--c-light-salmon-50);
         --color-button-bg-hover-gradient-1: var(--c-light-salmon-100);
         --color-button-bg-hover-gradient-2: var(--c-light-salmon-50);
+        --color-button-dark-bg-hover-gradient-1: var(--c-neutral-700);
+        --color-button-dark-bg-hover-gradient-2: var(--c-neutral-900);
+        --color-button-focus-outline: var(--c-neutral-900);
         --color-button-text: var(--c-neutral-900);
         --color-button-border: var(--c-neutral-900);
         --color-reading-journey-text: var(--c-neutral-900);
@@ -804,7 +807,7 @@
         justify-content: center;
         align-items: center;
         gap: 16px;
-        background: var(--color-button-bg);
+        background-color: var(--color-button-bg);
         color: var(--color-button-text);
         text-transform: uppercase;
         border: 2px solid var(--color-button-border);
@@ -817,6 +820,19 @@
                 to right,
                 var(--color-button-bg-hover-gradient-1),
                 var(--color-button-bg-hover-gradient-2)
+            );
+        }
+
+        &:focus-visible {
+            outline-offset: 5px;
+            outline-color: var(--color-button-focus-outline);
+        }
+
+        &.button-dark:hover {
+            background: linear-gradient(
+                to right,
+                var(--color-button-dark-bg-hover-gradient-1),
+                var(--color-button-dark-bg-hover-gradient-2)
             );
         }
     }

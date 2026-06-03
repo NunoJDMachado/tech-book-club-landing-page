@@ -1,3 +1,5 @@
 - minimum accessibility
 - add languages icons
 - hover states
+- did i miss that some elements have shadows?
+- only social hover missing
