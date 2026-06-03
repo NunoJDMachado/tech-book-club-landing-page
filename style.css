@@ -292,6 +292,12 @@
                 bottom: 0;
                 background-image: url(assets/images/glow/hero/tablet.png);
             }
+
+            @media (width >= calc(1024 / 16 * 1rem)) {
+                width: 412px;
+                height: 658px;
+                background-image: url(assets/images/glow/hero/desktop.png);
+            }
         }
     }
 
