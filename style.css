@@ -358,6 +358,7 @@
     }
 
     .languages {
+        /* position: relative; */
         display: grid;
         gap: 40px;
 
@@ -408,6 +409,10 @@
         .languages__text {
         }
 
+        .languages__images {
+            position: relative;
+        }
+
         .languages__picture {
         }
 
@@ -416,6 +421,22 @@
 
             @media (width >= calc(640 / 16 * 1rem)) {
                 border-radius: 25.14px;
+            }
+        }
+
+        .languages__logos {
+            display: none;
+
+            @media (width >= calc(640 / 16 * 1rem)) {
+                display: block;
+                position: absolute;
+                right: 50.44px;
+                bottom: 50.47px;
+            }
+
+            @media (width >= calc(1024 / 16 * 1rem)) {
+                left: calc(0px - 14%);
+                bottom: 31px;
             }
         }
     }
