@@ -656,21 +656,24 @@
         }
 
         .membership__features {
+            padding: 0;
             display: grid;
             gap: 16px;
         }
 
         .membership__feature {
             display: flex;
+            align-items: center;
+            list-style: none;
             gap: 12px;
-        }
 
-        .membership__feature-icon {
-            width: 24px;
-            height: 24px;
-        }
-
-        .membership__feature-text {
+            &::before {
+                content: "";
+                width: calc(24 / 16 * 1rem);
+                height: calc(24 / 16 * 1rem);
+                background-image: url(assets/images/icon-check.svg);
+                background-size: contain;
+            }
         }
 
         .membership__button {
