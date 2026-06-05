@@ -1,2 +1,1 @@
 - minimum accessibility
-- did i miss that some elements have shadows?
