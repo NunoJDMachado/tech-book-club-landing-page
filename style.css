@@ -677,6 +677,7 @@
                 height: calc(24 / 16 * 1rem);
                 background-image: url(assets/images/icon-check.svg);
                 background-size: contain;
+                background-repeat: no-repeat;
             }
         }
 
