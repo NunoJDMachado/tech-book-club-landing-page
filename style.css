@@ -95,9 +95,10 @@
 
     /* colors */
     :root {
+        --color-body-text: var(--c-neutral-700);
         --color-h1-gradient-1: var(--c-light-salmon-500);
         --color-h1-gradient-2: var(--c-neutral-900);
-        --color-h2-text: var(--c-neutral-900);
+        --color-heading-text: var(--c-neutral-900);
         --color-p-text: var(--c-neutral-700);
         --color-button-bg: var(--c-light-salmon-50);
         --color-button-bg-hover-gradient-1: var(--c-light-salmon-100);
@@ -155,15 +156,12 @@
     body {
         font-family: "Martian Mono", Arial, Helvetica, sans-serif;
         font-weight: 400;
-        color: var(--c-neutral-700);
+        color: var(--color-body-text);
     }
 
-    h2 {
-        color: var(--color-h2-text);
-    }
-
+    h2,
     h3 {
-        color: var(--c-neutral-900);
+        color: var(--color-heading-text);
     }
 
     p {
@@ -246,8 +244,8 @@
 
             &::after {
                 content: "";
-                width: 24px;
-                height: 25px;
+                width: calc(24 / 16 * 1rem);
+                height: calc(25 / 16 * 1rem);
                 background-image: url(assets/images/icon-arrow-down.svg);
             }
         }
@@ -322,17 +320,17 @@
         }
 
         .perks__item {
+            list-style: none;
             display: flex;
             align-items: center;
-            list-style: none;
             gap: 14px;
 
             &::before {
                 content: "";
                 width: calc(28 / 16 * 1rem);
                 height: calc(28 / 16 * 1rem);
-                flex-shrink: 0;
                 background-image: url(assets/images/icon-check.svg);
+                flex-shrink: 0;
             }
         }
 
@@ -346,7 +344,6 @@
     }
 
     .languages {
-        /* position: relative; */
         display: grid;
         gap: 40px;
 
@@ -373,14 +370,14 @@
 
             &::after {
                 content: "";
+                width: calc(108.62 / 16 * 1rem);
+                height: calc(46.53 / 16 * 1rem);
                 position: absolute;
+                bottom: 0;
+                right: -15px;
                 background-image: url("assets/images/pattern-circle.png");
                 background-repeat: no-repeat;
                 background-size: contain;
-                width: calc(108.62 / 16 * 1rem);
-                height: calc(46.53 / 16 * 1rem);
-                bottom: 0;
-                right: -15px;
 
                 @media (width >= calc(640 / 16 * 1rem)) {
                     width: calc(158.9 / 16 * 1rem);
@@ -421,14 +418,14 @@
     }
 
     .reading-journey {
-        background-image: url(assets/images/pattern-light-bg.svg);
-        background-color: var(--color-reading-journey-bg);
-        padding-block: 64px;
-        padding-inline: 16px;
-        border-radius: 12px;
         position: relative;
         overflow: hidden;
         z-index: 0;
+        background-image: url(assets/images/pattern-light-bg.svg);
+        background-color: var(--color-reading-journey-bg);
+        border-radius: 12px;
+        padding-inline: 16px;
+        padding-block: 64px;
 
         @media (width >= calc(640 / 16 * 1rem)) {
             padding-inline: 32px;
@@ -455,10 +452,10 @@
         }
 
         .reading-journey__steps {
-            color: var(--color-reading-journey-text);
             padding: 0;
             display: grid;
             gap: 32px;
+            color: var(--color-reading-journey-text);
 
             @media (width >= calc(640 / 16 * 1rem)) {
                 gap: 40px;
@@ -481,8 +478,8 @@
 
             &::after {
                 content: "";
-                width: 80px;
-                height: 33px;
+                width: calc(80 / 16 * 1rem);
+                height: calc(33 / 16 * 1rem);
                 background-image: url(assets/images/pattern-arrow.svg);
 
                 @media (width < calc(1024 / 16 * 1rem)) {
@@ -492,12 +489,12 @@
         }
 
         .reading-journey__step-number {
-            display: flex;
-            border: 2px solid var(--color-reading-journey-text);
-            justify-content: center;
-            align-items: center;
             width: calc(32 / 16 * 1rem);
             height: calc(32 / 16 * 1rem);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid var(--color-reading-journey-text);
             border-radius: 4px;
             margin-block-end: 20px;
 
@@ -510,9 +507,9 @@
 
         &::after {
             content: "";
-            z-index: -1;
             width: 340px;
             height: 502px;
+            z-index: -1;
             position: absolute;
             right: 0;
             bottom: 0;
@@ -567,8 +564,8 @@
 
             &.glow {
                 position: relative;
-                background-color: var(--color-membership-glow-bg);
                 z-index: 0;
+                background-color: var(--color-membership-glow-bg);
 
                 @media (width >= calc(1024 / 16 * 1rem)) {
                     padding-block: 40px;
@@ -576,9 +573,9 @@
 
                 &::after {
                     content: "";
-                    z-index: -1;
                     width: 340px;
                     height: 354px;
+                    z-index: -1;
                     position: absolute;
                     right: 0;
                     bottom: 0;
@@ -633,9 +630,9 @@
         }
 
         .membership__feature {
+            list-style: none;
             display: flex;
             align-items: center;
-            list-style: none;
             gap: 12px;
 
             &::before {
@@ -692,7 +689,6 @@
             }
 
             @media (width >= calc(1024 / 16 * 1rem)) {
-                display: grid;
                 padding-block-start: 80px;
             }
         }
@@ -709,16 +705,16 @@
         }
 
         .footer-cta__button {
-            color: var(--color-footer-cta-text);
+            justify-self: center;
             background: transparent;
+            color: var(--color-footer-cta-text);
             border-color: var(--color-footer-cta-button-border);
             margin-block-end: 24px;
-            justify-self: center;
 
             &::after {
                 content: "";
-                width: 24px;
-                height: 25px;
+                width: calc(24 / 16 * 1rem);
+                height: calc(25 / 16 * 1rem);
                 background-image: url(assets/images/icon-arrow-up.svg);
             }
         }
