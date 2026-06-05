@@ -217,9 +217,6 @@
             }
         }
 
-        .hero__logo {
-        }
-
         .hero__body {
             display: grid;
             gap: 64px;
@@ -227,9 +224,6 @@
             @media (width >= calc(1024 / 16 * 1rem)) {
                 grid-template-columns: repeat(2, 1fr);
             }
-        }
-
-        .hero__content {
         }
 
         .hero__title {
@@ -256,18 +250,6 @@
                 height: 25px;
                 background-image: url(assets/images/icon-arrow-down.svg);
             }
-        }
-
-        .hero__rating {
-        }
-
-        .hero__avatars {
-        }
-
-        .hero__stars {
-        }
-
-        .hero__testimonial-text {
         }
 
         .hero__image {
@@ -354,9 +336,6 @@
             }
         }
 
-        .perks__picture {
-        }
-
         .perks__image {
             border-radius: 12.25px;
 
@@ -377,9 +356,6 @@
                 minmax(0, calc(560 / 16 * 1rem));
             align-items: center;
             gap: 80px;
-        }
-
-        .languages__content {
         }
 
         .languages__title {
@@ -415,14 +391,8 @@
             }
         }
 
-        .languages__text {
-        }
-
         .languages__images {
             position: relative;
-        }
-
-        .languages__picture {
         }
 
         .languages__image {
@@ -634,9 +604,6 @@
             margin-block-end: 32px;
         }
 
-        .membership__option-title {
-        }
-
         .membership__price {
             display: flex;
             gap: 8px;
@@ -708,9 +675,6 @@
         .testimonal__quote p {
             color: var(--color-testimonial-quote-text);
         }
-
-        .testimonal__quote-attribution {
-        }
     }
 
     .footer-cta {
@@ -761,9 +725,6 @@
 
         .footer-cta__rating {
             justify-self: center;
-        }
-
-        .footer-cta__avatars {
         }
 
         .footer-cta__stars {
