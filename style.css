@@ -249,9 +249,13 @@
 
         .hero__button {
             margin-block-end: 20px;
-        }
 
-        .hero__button-icon {
+            &::after {
+                content: "";
+                width: 24px;
+                height: 25px;
+                background-image: url(assets/images/icon-arrow-down.svg);
+            }
         }
 
         .hero__rating {
@@ -745,9 +749,13 @@
             border-color: var(--color-footer-cta-button-border);
             margin-block-end: 24px;
             justify-self: center;
-        }
 
-        .footer-cta__button-icon {
+            &::after {
+                content: "";
+                width: 24px;
+                height: 25px;
+                background-image: url(assets/images/icon-arrow-up.svg);
+            }
         }
 
         .footer-cta__rating {
