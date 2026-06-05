@@ -504,6 +504,17 @@
             display: flex;
             justify-content: space-between;
             align-items: start;
+
+            &::after {
+                content: "";
+                width: 80px;
+                height: 33px;
+                background-image: url(assets/images/pattern-arrow.svg);
+
+                @media (width < calc(1024 / 16 * 1rem)) {
+                    display: none;
+                }
+            }
         }
 
         .reading-journey__step-number {
@@ -520,12 +531,6 @@
                 width: calc(40 / 16 * 1rem);
                 height: calc(40 / 16 * 1rem);
                 margin-block-end: 24px;
-            }
-        }
-
-        .reading-journey__arrow {
-            @media (width < calc(1024 / 16 * 1rem)) {
-                display: none;
             }
         }
 
