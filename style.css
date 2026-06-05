@@ -797,6 +797,10 @@
             justify-content: center;
             gap: 24px;
         }
+
+        .footer-cta__socials-link:hover {
+            opacity: 0.6;
+        }
     }
 }
 
